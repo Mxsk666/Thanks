@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Restricted - 访问受限</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #e9ecef;
+            --accent-color: #3498db; /* 统一的强调色（蓝色） */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* 统一所有语言卡片的外框样式 */
+        .lang-block {
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background-color: #fcfcfc;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        /* 统一悬浮动画：全部向右滑动 */
+        .lang-block:hover {
+            transform: translateX(5px);
+            background-color: #f1f8ff;
+        }
+
+        .lang-name {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: left; /* 统一语言标签靠左对齐 */
+        }
+
+        .lang-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* 仅针对阿拉伯文的文本内容应用 RTL（从右向左），不影响外框统一性 */
+        .rtl-text {
+            direction: rtl;
+            text-align: right;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .lang-block {
+                padding: 12px 15px;
+            }
+            .lang-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="icon">🌍</div>
+            <h1>Access Restricted / 访问受限</h1>
+        </div>
+
+        <!-- 中文 -->
+        <div class="lang-block">
+            <div class="lang-name">简体中文 (Chinese)</div>
+            <p class="lang-text">对不起，该网站仅限中国大陆部分用户访问，对您造成不便敬请谅解，谢谢！</p>
+        </div>
+
+        <!-- 英文 -->
+        <div class="lang-block">
+            <div class="lang-name">English</div>
+            <p class="lang-text">Sorry, this website is only accessible to some users in Mainland China. We apologize for any inconvenience and thank you for your understanding.</p>
+        </div>
+
+        <!-- 法文 -->
+        <div class="lang-block">
+            <div class="lang-name">Français (French)</div>
+            <p class="lang-text">Désolé, ce site Web n'est accessible qu'à certains utilisateurs en Chine continentale. Nous vous prions de nous excuser pour tout désagrément et vous remercions de votre compréhension.</p>
+        </div>
+
+        <!-- 俄文 -->
+        <div class="lang-block">
+            <div class="lang-name">Русский (Russian)</div>
+            <p class="lang-text">Извините, доступ к этому сайту разрешен только некоторым пользователям в материковом Китае. Приносим извинения за возможные неудобства и благодарим за понимание.</p>
+        </div>
+
+        <!-- 西班牙文 -->
+        <div class="lang-block">
+            <div class="lang-name">Español (Spanish)</div>
+            <p class="lang-text">Lo sentimos, este sitio web solo es accesible para algunos usuarios en China continental. Le pedimos disculpas por cualquier inconveniente y le agradecemos su comprensión.</p>
+        </div>
+
+        <!-- 阿拉伯文 (外框完全统一，仅内部文字 RTL) -->
+        <div class="lang-block">
+            <div class="lang-name">العربية (Arabic)</div>
+            <p class="lang-text rtl-text">عذرًا، هذا الموقع متاح فقط لبعض المستخدمين في البر الرئيسي للصين. نعتذر عن أي إزعاج ونشكركم على تفهمكم.</p>
+        </div>
+    </div>
+
+</body>
+</html>
